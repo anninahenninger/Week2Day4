@@ -12,8 +12,8 @@ public class Soup {
         this.name = name;
     }
 
-    
-    public String getPortionVolume() {
+
+    public String getSoupPortionVolume(){
         return portionVolume;
     }
 

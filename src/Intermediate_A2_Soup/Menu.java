@@ -34,7 +34,11 @@ public class Menu {
         this.mainDish = mainDish;
         this.desert = desert;
     }
-    public String getPortionVolume(){
-        return this.soup.getPortionVolume();
+    public String getPortionVolume() throws NoSoupVolumeDefined {
+        if (this.soup.getSoupPortionVolume() == null) {
+            throw new NoSoupVolumeDefined();
+        } else {
+            return this.soup.getSoupPortionVolume();
+        }
     }
 }

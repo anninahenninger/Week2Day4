@@ -45,9 +45,14 @@ public class Main {
 
         System.out.println(((WeekdayMenu) m1).getSoupOfTheDay());
 
-        ((WeekendMenu) m7).printMenu();
+        ((WeekendMenu) m6).printMenu();
 
-        System.out.println(m6.getPortionVolume());
+        try {
+            System.out.println(m6.getPortionVolume());
+        }
+        catch (NoSoupVolumeDefined nsvd){
+            System.out.println("There is no portion volume defined for the soup");
+        }
 
 
 
