@@ -14,9 +14,8 @@ public class Main {
         try{
             ba1.withdrawMoney(50);
         } catch(BankAcccountNegativeException c1){
-            System.out.println("Cant go to minus!");
+            System.out.println(c1+ ": Cant go to minus!");
         }
         System.out.println(ba1.getAccountBalance());
     }
-
 }
