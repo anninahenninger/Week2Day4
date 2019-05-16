@@ -7,6 +7,7 @@ public class CreditCardAccount extends BankAccount{
     CreditCardAccount(Customer customerName, double accountBalance){
         super(customerName, accountBalance);
     }
+    /*
     @Override
     public void withdrawMoney(double removeMoney) throws BankAcccountNegativeException{
 
@@ -18,5 +19,5 @@ public class CreditCardAccount extends BankAccount{
             this.setAccountBalance(acB);
         }
     }
-
+     */
 }
