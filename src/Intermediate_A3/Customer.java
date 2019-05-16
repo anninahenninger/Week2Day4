@@ -27,12 +27,12 @@ public class Customer {
         this.address = adress;
     }
 
-    public int getCustomerCreditScore() {
+    public int getCreditScore() {
         return creditScore;
     }
 
     public void setCreditScore(int creditScore) throws BadCreditScoreException{
-        if(creditScore < 0 && creditScore > 5){
+        if(creditScore < 0 || creditScore > 5){
             throw new BadCreditScoreException();
         } else {
             this.creditScore = creditScore;

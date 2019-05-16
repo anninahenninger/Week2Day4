@@ -36,8 +36,4 @@ public class BankAccount {
             this.accountBalance -= removeMoney;
         }
     }
-
-    public int getCreditScore(){
-        return this.customer.getCustomerCreditScore();
-    }
 }

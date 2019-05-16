@@ -15,6 +15,12 @@ public class Main {
         }
         System.out.println(cca1.getAccountBalance());
 
-        System.out.println(ba1.getCreditScore());
+        System.out.println(ba1.getCustomer().getCreditScore());
+        try{
+            ba1.getCustomer().setCreditScore(6);
+        } catch(BadCreditScoreException b1){
+            System.out.println(b1 + ": Cant change number to anything else but 0-5");
+        }
+        System.out.println(ba1.getCustomer().getCreditScore());
     }
 }
