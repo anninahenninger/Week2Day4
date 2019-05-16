@@ -1,20 +1,20 @@
 package Intermediate_A3;
 
 public class BankAccount {
-    private String customerName;
+    private Customer customer;
     private double accountBalance;
 
-    BankAccount(String customerName, double accountBalance){
-        this.customerName = customerName;
+    BankAccount(Customer customerName, double accountBalance){
+        this.customer = customerName;
         this.accountBalance = accountBalance;
     }
 
-    public String getCustomerName() {
-        return this.customerName;
+    public Customer getCustomer() {
+        return this.customer;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public double getAccountBalance() {
@@ -30,11 +30,14 @@ public class BankAccount {
     }
 
     public void withdrawMoney(double removeMoney) throws BankAcccountNegativeException{
-
         if((this.accountBalance - removeMoney) < DebitCardAccount.limit){
             throw new BankAcccountNegativeException();
         } else {
             this.accountBalance -= removeMoney;
         }
+    }
+
+    public int getCreditScore(){
+        return this.customer.getCustomerCreditScore();
     }
 }

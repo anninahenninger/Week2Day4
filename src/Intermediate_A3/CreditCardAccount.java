@@ -4,7 +4,7 @@ public class CreditCardAccount extends BankAccount{
 
     public static final double limit = -3500;
 
-    CreditCardAccount(String customerName, double accountBalance){
+    CreditCardAccount(Customer customerName, double accountBalance){
         super(customerName, accountBalance);
     }
     @Override
