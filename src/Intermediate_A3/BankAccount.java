@@ -30,6 +30,7 @@ public class BankAccount {
     }
 
     public void withdrawMoney(double removeMoney) throws BankAcccountNegativeException{
+
         if((this.accountBalance - removeMoney) < 0){
             throw new BankAcccountNegativeException();
         } else {
