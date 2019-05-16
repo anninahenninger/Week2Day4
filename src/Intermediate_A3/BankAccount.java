@@ -31,7 +31,7 @@ public class BankAccount {
 
     public void withdrawMoney(double removeMoney) throws BankAcccountNegativeException{
 
-        if((this.accountBalance - removeMoney) < 0){
+        if((this.accountBalance - removeMoney) < DebitCardAccount.limit){
             throw new BankAcccountNegativeException();
         } else {
             this.accountBalance -= removeMoney;

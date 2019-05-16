@@ -15,5 +15,13 @@ public class Main {
         }
         System.out.println(ba1.getAccountBalance());
 
+        System.out.println(cca1.getAccountBalance());
+        try{
+            cca1.withdrawMoney(4000);
+        } catch(BankAcccountNegativeException c1){
+            System.out.println(c1+ ": Cant go to minus!");
+        }
+        System.out.println(cca1.getAccountBalance());
+
     }
 }
